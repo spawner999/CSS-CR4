@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the gallery of the site/application.
+// -----------------------------------------------------------------------------
+
+.gallery {
+  @include flex-container(100%, 100%, 1em);
+  @include align-items(flex-end, center, row wrap);
+  @include e("card"){
+    padding: .5em;
+    @include bg-img("../img/raft.jpg", auto);
+    height: 250px;
+    lost-column: 1/1;
+    @include align-items(flex-end, center, column nowrap);
+    margin-bottom: 1em;
+    &:hover{
+      a{
+      transform: scale(1.5);
+      }
+    }
+    @include e("icon"){
+      margin: auto;
+      a{
+        @include bg-img("../img/icon-raft.svg");
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #323232;
+        border-radius: 50%;
+        opacity: .8;
+        transition: all .2s ease-in-out;
+
+      }
+    }
+    h3{
+      align-self: flex-start;
+      color: white;
+      border-top: 3px solid $brand-color;
+    }
+  }
+}

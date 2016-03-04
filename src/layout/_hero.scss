@@ -1,17 +1,20 @@
-.wrapper{
-
-}
-
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the hero of the site/application.
+// -----------------------------------------------------------------------------
 .hero{
-  @include flex-container(100%, 100vh, space-between, center, column nowrap, 1em);
+  @include flex-container(100%, 100vh, 1em);
+  @include align-items(space-between, center, column nowrap);
   align-content: space-between;
   @extend %hero-text;
   @include bg-img("../img/hero.jpg", auto);
   @include e("header") {
-    @include flex-container(100%, auto, space-between, $padding: 0.5em);
+    @include flex-container(100%, auto, 0.5em);
+    @include align-items(space-between, center);
   }
   @include e("title") {
-    @include flex-container(100%, auto, space-between, center, column nowrap, 0.5em);
+    @include flex-container(100%, auto, 0.5em);
+    @include align-items(space-between, center, column nowrap);
+    border-bottom: 5px solid $brand-color;
   }
   button{
     @extend %button;
