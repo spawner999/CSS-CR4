@@ -7,6 +7,7 @@
   align-content: space-between;
   @extend %hero-text;
   @include bg-img("../img/hero.jpg", auto);
+  @extend %img-query;
   @include e("header") {
     @include flex-container(100%, auto, 0.5em);
     @include align-items(space-between, center);

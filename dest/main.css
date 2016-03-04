@@ -167,63 +167,11 @@ body {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
-  .gallery__card {
-    padding: .5em;
-    background-image: url("../img/raft.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-    height: 250px;
-    flex: 0 0 auto;
-    width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-flow: column nowrap;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    margin-bottom: 1em; }
-  .gallery__card:nth-child(1n) {
-  margin-right: 30px; }
-  .gallery__card:last-child {
-  margin-right: 0; }
-  .gallery__card:nth-child(1n) {
-  float: right; }
-  .gallery__card:nth-child(1n) {
-  margin-right: 0; }
-    .gallery__card:hover a {
-      -webkit-transform: scale(1.5);
-              transform: scale(1.5); }
-    .gallery__card__icon {
-      margin: auto; }
-      .gallery__card__icon a {
-        background-image: url("../img/icon-raft.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-color: #323232;
-        border-radius: 50%;
-        opacity: .8;
-        -webkit-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out; }
-    .gallery__card h3 {
-      -webkit-align-self: flex-start;
-          -ms-flex-item-align: start;
-              align-self: flex-start;
-      color: white;
-      border-top: 3px solid #DC7725; }
+  @media screen and (min-width: 600px) {
+    .gallery {
+      padding: 0; } }
+  .gallery__card__icon {
+    margin: auto; }
 
 .hero {
   width: 100%;
@@ -299,5 +247,115 @@ body {
   color: white;
   height: 50px;
   border: none; }
+
+.gallery__card, .gallery__card--wider {
+  padding: .5em;
+  background-image: url("../img/raft.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
+  .gallery__card h3, .gallery__card--wider h3 {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    color: white;
+    border-top: 3px solid #DC7725; }
+  .gallery__card:hover a, .gallery__card--wider:hover a {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5); }
+
+.gallery__card__icon a {
+  background-image: url("../img/icon-raft.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #323232;
+  border-radius: 50%;
+  opacity: .8;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.gallery__card, .gallery__card--wider {
+  height: 250px;
+  flex: 0 0 auto;
+  width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
+  margin-bottom: 1em; }
+
+.gallery__card:nth-child(1n), .gallery__card--wider:nth-child(1n) {
+  margin-right: 30px; }
+
+.gallery__card:last-child, .gallery__card--wider:last-child {
+  margin-right: 0; }
+
+.gallery__card:nth-child(1n), .gallery__card--wider:nth-child(1n) {
+  float: right; }
+
+.gallery__card:nth-child(1n), .gallery__card--wider:nth-child(1n) {
+  margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .gallery__card, .gallery__card--wider {
+      height: 400px;
+      margin: 0; } }
+
+@media screen and (min-width: 600px) {
+  .gallery__card {
+    flex: 0 0 auto;
+    width: calc(99.999999% * 1/2); }
+  .gallery__card:nth-child(1n) {
+    margin-right: 0; }
+  .gallery__card:last-child {
+    margin-right: 0; }
+  .gallery__card:nth-child(2n) {
+    float: right; }
+  .gallery__card:nth-child(2n) {
+    margin-right: 0; } }
+
+@media screen and (min-width: 1000px) {
+  .gallery__card {
+    flex: 0 0 auto;
+    width: calc(99.999999% * 1/4); }
+  .gallery__card:nth-child(1n) {
+    margin-right: 0; }
+  .gallery__card:last-child {
+    margin-right: 0; }
+  .gallery__card:nth-child(3n) {
+    float: right; }
+  .gallery__card:nth-child(3n) {
+    margin-right: 0; } }
+
+@media screen and (min-width: 1000px) {
+  .gallery__card--wider {
+    flex: 0 0 auto;
+    width: calc(99.999999% * 2/4); }
+  .gallery__card--wider:nth-child(1n) {
+    margin-right: 0; }
+  .gallery__card--wider:last-child {
+    margin-right: 0; }
+  .gallery__card--wider:nth-child(3n) {
+    float: right; }
+  .gallery__card--wider:nth-child(3n) {
+    margin-right: 0; } }
+
+@media screen and (min-width: 1000px) {
+  .gallery__card, .gallery__card--wider, .hero {
+    background-size: 100% 100%; } }
 
 /*# sourceMappingURL=main.css.map */

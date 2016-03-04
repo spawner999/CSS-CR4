@@ -4,37 +4,22 @@
 
 .gallery {
   @include flex-container(100%, 100%, 1em);
+    @media screen and (min-width: 600px){
+      padding: 0;
+  }
   @include align-items(flex-end, center, row wrap);
   @include e("card"){
-    padding: .5em;
-    @include bg-img("../img/raft.jpg", auto);
-    height: 250px;
-    lost-column: 1/1;
-    @include align-items(flex-end, center, column nowrap);
-    margin-bottom: 1em;
-    &:hover{
-      a{
-      transform: scale(1.5);
-      }
-    }
+    @extend %card;
+    @extend %img-query;
+    @extend %card-tablet--small;
     @include e("icon"){
       margin: auto;
-      a{
-        @include bg-img("../img/icon-raft.svg");
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-color: #323232;
-        border-radius: 50%;
-        opacity: .8;
-        transition: all .2s ease-in-out;
-
-      }
+      @extend %icon;
     }
-    h3{
-      align-self: flex-start;
-      color: white;
-      border-top: 3px solid $brand-color;
-    }
+     @include m("wider") {
+       @extend %card;
+       @extend %img-query;
+       @extend %card-tablet--wider;
+     }
   }
 }
