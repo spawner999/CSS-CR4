@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+%button {
+  background: $brand-color;
+  color: white;
+  height: 50px;
+  @extend %hero-text;
+  border: none;
+}

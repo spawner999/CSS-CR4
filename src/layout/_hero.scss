@@ -1,0 +1,19 @@
+.wrapper{
+
+}
+
+.hero{
+  @include flex-container(100%, 100vh, space-between, center, column nowrap, 1em);
+  align-content: space-between;
+  @extend %hero-text;
+  @include bg-img("../img/hero.jpg", auto);
+  @include e("header") {
+    @include flex-container(100%, auto, space-between, $padding: 0.5em);
+  }
+  @include e("title") {
+    @include flex-container(100%, auto, space-between, center, column nowrap, 0.5em);
+  }
+  button{
+    @extend %button;
+  }
+}
