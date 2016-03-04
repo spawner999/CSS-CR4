@@ -8,15 +8,59 @@
     <link rel="stylesheet" href="dest/main.css">
   </head>
   <body>
-    <div class="wrapper">
 
       <section class="hero">
         <div class="hero__header">
           <div class="hero__header__brand">
-              <a><h3>arctic wild</h3></a>
+            <h3>arctic wild</h3>
           </div>
           <div class="hero__header__nav">
-            <a href="#"><i class="fa fa-bars"></i></a>
+            <a class="toggle" href="#"><i class="fa fa-bars"></i></a>
+            <ul class="nav">
+              <li><a href="#">schedule</a></li>
+              <li>
+                <a href="#">
+                  destinations <i class="fa fa-arrow-down"></i>
+                </a>
+                <ul class="hidden">
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                  <li><a href="#">item</a></li>
+                </ul></li>
+              <li><a href="#">
+                activities <i class="fa fa-arrow-down"></i>
+              </a>
+              <ul class="hidden">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul></li>
+              <li><a href="#">
+                planning <i class="fa fa-arrow-down"></i>
+              </a>
+              <ul class="hidden">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul></li>
+              <li><a href="#">
+                about <i class="fa fa-arrow-down"></i>
+              </a>
+              <ul class="hidden">
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+              </ul></li>
+              <li><a href="#">contact</a></li>
+            </ul>
           </div>
         </div>
         <div class="hero__title">
@@ -24,11 +68,10 @@
           <h4>Enjoy the solitude and solace of</h4>
           <h1>arctic wild</h1>
         </div>
-        <button type="button" name="button">Explore Below</button>
-      </div>
+        <a href="#content"><button type="submit" name="button">Explore Below</button></a>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="content">
       <div class="gallery__card--wider">
         <div class="gallery__card__icon">
           <a href="#"></a>
@@ -65,7 +108,6 @@
         </div>
         <h3>Trips</h3>
       </div>
-
     </section>
 
   </body>

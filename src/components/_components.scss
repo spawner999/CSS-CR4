@@ -4,16 +4,18 @@
 %button {
   background: $brand-color;
   color: white;
+  width: 200px;
   height: 50px;
   @extend %hero-text;
   border: none;
+  box-shadow: .5px .5px 1px black;
 }
 
 %card {
   padding: .5em;
-  @include bg-img("../img/raft.jpg", auto);
+  @include bg-img("../img/raft.jpg");
   @include align-items(flex-end, center, column nowrap);
-  @extend %card-mobile;
+  @extend %card-general;
   h3{
     align-self: flex-start;
     color: white;
@@ -29,7 +31,6 @@
 %icon {
   a{
     @include bg-img("../img/icon-raft.svg");
-  
     display: block;
     width: 50px;
     height: 50px;
@@ -37,10 +38,14 @@
     border-radius: 50%;
     opacity: .8;
     transition: all .2s ease-in-out;
+    @media  screen and (min-width: 1000px){
+      width: 65px;
+      height: 65px;
+    }
   }
 }
 
-%card-mobile {
+%card-general {
   height: 250px;
   lost-column: 1/1;
   margin-bottom: 1em;
@@ -50,22 +55,17 @@
   }
 }
 
-%card-tablet--small{
+%card--small{
   @media screen and (min-width: 600px){
-    lost-column: 1/2 2 0;
+    lost-column: 1/2 0 0;
   }
   @media screen and (min-width: 1000px){
-    lost-column: 1/4 3 0;
+    lost-column: 1/4 0 0;
   }
 }
 
-%card-tablet--wider{
+%card--wider{
   @media screen and (min-width: 1000px){
-    lost-column: 2/4 3 0;
-  }
-}
-%img-query{
-  @media screen and (min-width: 1000px){
-    background-size: 100% 100%;
+    lost-column: 1/2 0 0;
   }
 }

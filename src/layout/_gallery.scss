@@ -10,16 +10,18 @@
   @include align-items(flex-end, center, row wrap);
   @include e("card"){
     @extend %card;
-    @extend %img-query;
-    @extend %card-tablet--small;
+    @extend %card--small;
     @include e("icon"){
       margin: auto;
       @extend %icon;
     }
      @include m("wider") {
        @extend %card;
-       @extend %img-query;
-       @extend %card-tablet--wider;
+       @extend %card--wider;
      }
   }
+  .wider {
+    @extend %card--wider;
+  }
+
 }

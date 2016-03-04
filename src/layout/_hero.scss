@@ -6,14 +6,41 @@
   @include align-items(space-between, center, column nowrap);
   align-content: space-between;
   @extend %hero-text;
-  @include bg-img("../img/hero.jpg", auto);
-  @extend %img-query;
+  @include bg-img("../img/hero.jpg");
   @include e("header") {
     @include flex-container(100%, auto, 0.5em);
     @include align-items(space-between, center);
+    .nav{
+      @include flex-container(auto, 100%, 0.5em);
+      display: none;
+      .hidden {
+      display: none;
+    }
+    }
+    @media screen and (min-width:1000px){
+      .toggle{
+        display: none;
+      }
+      .nav {
+        @include align-items(space-between, flex-end);
+        > li {
+          font-size: .6em;
+          font-weight: normal;
+          margin-right: 1em;
+          &:hover {
+            > ul {
+              @include flex-container(auto, auto, 0.5em);
+              @include align-items(space-between, flex-start, column nowrap);
+              position: absolute;
+            }
+
+          }
+        }
+      }
+    }
   }
   @include e("title") {
-    @include flex-container(100%, auto, 0.5em);
+    @include flex-container(auto, auto, 0.5em);
     @include align-items(space-between, center, column nowrap);
     border-bottom: 5px solid $brand-color;
   }
