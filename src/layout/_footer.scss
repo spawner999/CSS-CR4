@@ -1,3 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.footer {
+  @include flex-container(100%, 100%, 2em);
+  @extend %grey-bg;
+  @include align-items(center, flex-end);
+}

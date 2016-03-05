@@ -10,6 +10,7 @@
   @include e("header") {
     @include flex-container(100%, auto, 0.5em);
     @include align-items(space-between, center);
+    // JANKY CODE NEED REFACTOR
     .nav{
       @include flex-container(auto, 100%, 0.5em);
       display: none;
@@ -38,6 +39,7 @@
       }
     }
   }
+  // END OF JANKY CODE
   @include e("title") {
     margin-bottom: 30vh;
     @include flex-container(auto, auto, 0.5em);
