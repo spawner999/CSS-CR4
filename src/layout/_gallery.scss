@@ -23,5 +23,9 @@
   .wider {
     @extend %card--wider;
   }
+}
 
+// Generate section background images
+@for $i from 1 through 6 {
+  @include bg-setter(gallery, $i);
 }

@@ -64,3 +64,11 @@ background-size: cover;
   align-items: $align;
   flex-flow: $flex-flow;
 }
+
+@mixin bg-setter($container, $child) {
+  .#{$container} {
+    > *:nth-child(#{$child}){
+      @include bg-img("../img/#{$child}.jpg");
+    }
+  }
+}

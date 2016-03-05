@@ -8,12 +8,11 @@
   height: 50px;
   @extend %hero-text;
   border: none;
-  box-shadow: .5px .5px 1px black;
+  box-shadow: 1px 1px 2px black;
 }
 
 %card {
   padding: .5em;
-  @include bg-img("../img/raft.jpg");
   @include align-items(flex-end, center, column nowrap);
   @extend %card-general;
   h3{

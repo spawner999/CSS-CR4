@@ -69,7 +69,7 @@ a {
 
 h1, h2, h3, h4 {
   color: #DC7725;
-  text-shadow: 1px 1px 2px black; }
+  text-shadow: 2px 2px 2px black; }
 
 h1 {
   font-size: 2.3em; }
@@ -82,10 +82,13 @@ h4 {
  */
 body {
   color: #315D59;
-  font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 90%/1.4 "Georgia", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", serif; }
   @media screen and (min-width: 600px) {
     body {
-      font: normal 175%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; } }
+      font: normal 165%/1.4 "Georgia", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", serif; } }
+  @media screen and (min-width: 1300px) {
+    body {
+      font: normal 200%/1.4 "Georgia", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", serif; } }
 
 .hero, .hero button {
   text-transform: uppercase;
@@ -173,6 +176,42 @@ body {
   .gallery__card__icon {
     margin: auto; }
 
+.gallery > *:nth-child(1) {
+  background-image: url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.gallery > *:nth-child(2) {
+  background-image: url("../img/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.gallery > *:nth-child(3) {
+  background-image: url("../img/3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.gallery > *:nth-child(4) {
+  background-image: url("../img/4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.gallery > *:nth-child(5) {
+  background-image: url("../img/5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.gallery > *:nth-child(6) {
+  background-image: url("../img/6.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -196,7 +235,7 @@ body {
   -webkit-align-content: space-between;
       -ms-flex-line-pack: justify;
           align-content: space-between;
-  background-image: url("../img/hero.jpg");
+  background-image: url("https://www.travelalaska.com/~/media/Images/TravelAlaska/Content/HomePage/CaribouDenali.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -228,7 +267,7 @@ body {
       display: none; }
       .hero__header .nav .hidden {
         display: none; }
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1100px) {
       .hero__header .toggle {
         display: none; }
       .hero__header .nav {
@@ -273,6 +312,7 @@ body {
                     flex-flow: column nowrap;
             position: absolute; } }
   .hero__title {
+    margin-bottom: 30vh;
     width: auto;
     height: auto;
     padding: 0.5em;
@@ -300,14 +340,10 @@ body {
   width: 200px;
   height: 50px;
   border: none;
-  box-shadow: .5px .5px 1px black; }
+  box-shadow: 1px 1px 2px black; }
 
 .gallery__card, .gallery__card--wider {
   padding: .5em;
-  background-image: url("../img/raft.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
